@@ -1,6 +1,8 @@
 <script>
 	import CourseCategoryForm from "$lib/components/CourseCategoryForm.svelte";
 	import ProductCard from "$lib/components/ProductCard.svelte";
+	
+	/** @type {import('./$types').PageData} */
 	export let data;
 	let courses = data.record ? data.record : [];
 	// console.log("hell",courses)
@@ -13,12 +15,6 @@
 <CourseCategoryForm/>
 <div class="md:container md:mx-auto px-4">
 	<Layout gap={6}>
-	  <!-- <P class="mb-3" weight="light" color="text-gray-500 dark:text-gray-400">
-		Track work across the enterprise through an open, collaborative platform. Link issues across
-		Jira and ingest data from other software development tools, so your IT support and operations
-		teams have richer contextual information to rapidly respond to requests, incidents, and
-		changes.
-	  </P> -->
 	  {#each courses as item}
 		 <!-- content here -->
 		 <P class="mb-3" weight="light" color="text-gray-500 dark:text-gray-400">

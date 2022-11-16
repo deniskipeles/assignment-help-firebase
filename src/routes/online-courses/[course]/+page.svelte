@@ -2,7 +2,7 @@
     import CourseCard from "$lib/components/CourseCard.svelte";
 	import CourseForm from "$lib/components/CourseForm.svelte";
 	import ProductCard from "$lib/components/ProductCard.svelte";
-    import { Avatar } from "flowbite-svelte";
+    import { Avatar, Button } from "flowbite-svelte";
     
 	export let data;
 	let courses = data.record ? data.record : [];
@@ -12,8 +12,10 @@
 
 </script>
 
-
-<CourseForm category={data.course}/>
+<p>
+	<Button on:click={()=>history.back()}>Go Back</Button>
+	<CourseForm category={data.course}/>
+</p>
 
 
 
